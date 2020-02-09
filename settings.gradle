@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='info_qr'
