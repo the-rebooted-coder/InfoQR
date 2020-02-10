@@ -4,4 +4,5 @@
     <string name="welcome">WELCOME TO InfoQR</string>
     <string name="infoqr">INFO QR</string>
     <string name="developer">From DevWings</string>
+    <string name="before_scan">Focus on a QR</string>
 </resources>
