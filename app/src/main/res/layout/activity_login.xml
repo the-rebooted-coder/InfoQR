@@ -6,4 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".Login_Activity">
 
+    <com.google.android.gms.common.SignInButton
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
