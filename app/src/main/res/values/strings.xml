@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">info_qr</string>
-    <string name="hi_i_m_the_infoqr">Hi! I\'m the InfoQR</string>
     <string name="sign_out">Sign Out</string>
+    <string name="welcome">WELCOME TO InfoQR</string>
+    <string name="infoqr">INFO QR</string>
+    <string name="developer">From DevWings</string>
 </resources>

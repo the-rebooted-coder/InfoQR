@@ -5,4 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".Splash_Screen" />
+    tools:context=".Splash_Screen" >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="229dp"
+        android:layout_height="90dp"
+        android:fontFamily="@font/concert_one"
+        android:text="@string/infoqr"
+        android:textAlignment="center"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/permanent_marker"
+        android:text="@string/developer"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
+</androidx.constraintlayout.widget.ConstraintLayout>
