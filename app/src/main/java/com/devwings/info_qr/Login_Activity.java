@@ -89,6 +89,8 @@ public class Login_Activity extends AppCompatActivity {
             GoogleSignInAccount acc = completedTask.getResult(ApiException.class);
             Toast.makeText(Login_Activity.this, "Welcome, Signed in Successfully",Toast.LENGTH_SHORT).show();
             FirebaseGoogleAuth(acc);
+            startActivity(new Intent(Login_Activity.this, Scan_Activity.class));
+            finish();
 
         }
         catch (ApiException e){
@@ -126,7 +128,7 @@ public class Login_Activity extends AppCompatActivity {
             String personEmail = account.getEmail();
             String personId = account.getId();
             Uri personPhoto = account.getPhotoUrl();
-            Toast.makeText(Login_Activity.this,personName + personEmail,Toast.LENGTH_SHORT).show();
+            Toast.makeText(Login_Activity.this,personName,Toast.LENGTH_SHORT).show();
         }
     }
 

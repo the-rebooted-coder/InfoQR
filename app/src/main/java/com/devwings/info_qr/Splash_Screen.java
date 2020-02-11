@@ -29,4 +29,3 @@ public class Splash_Screen extends AppCompatActivity {
 
 //This app is developed by Anshu and Arpit//
 //and Amit, Akshat, Param, Eshita//
-//Final Check//
