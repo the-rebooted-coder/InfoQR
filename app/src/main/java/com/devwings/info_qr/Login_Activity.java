@@ -91,7 +91,6 @@ public class Login_Activity extends AppCompatActivity {
             FirebaseGoogleAuth(acc);
             startActivity(new Intent(Login_Activity.this, Scan_Activity.class));
             finish();
-
         }
         catch (ApiException e){
             Toast.makeText(Login_Activity.this, "Sign in Failed",Toast.LENGTH_SHORT).show();
