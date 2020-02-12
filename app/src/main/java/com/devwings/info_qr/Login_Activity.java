@@ -3,8 +3,13 @@ package com.devwings.info_qr;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -34,6 +39,7 @@ public class Login_Activity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private Button btnSignOut;
     private int RC_SIGN_IN = 1;
+    private  static  final int CAMERA_PERMISSION=1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +60,7 @@ public class Login_Activity extends AppCompatActivity {
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                checkCameraPermission(Manifest.permission.CAMERA,CAMERA_PERMISSION);
                 signIn();
             }
         });
@@ -131,5 +138,29 @@ public class Login_Activity extends AppCompatActivity {
             finish();
         }
     }
+    public void checkCameraPermission(String permission,int requestcode)
+    {
+        if(ContextCompat.checkSelfPermission(Login_Activity.this,permission) == PackageManager.PERMISSION_DENIED){
+            ActivityCompat.requestPermissions(Login_Activity.this,new String[]{permission},requestcode);
+        }
+        else{
+            Toast.makeText(Login_Activity.this, "permission already granted", Toast.LENGTH_SHORT).show();
+        }
+    }
+    @Override
+    public  void onRequestPermissionsResult(int requestcode,@NonNull String[] permissions,@NonNull int[] grantResults){
+        super.onRequestPermissionsResult(requestcode,permissions,grantResults);
+        if(requestcode == CAMERA_PERMISSION){
+            if(grantResults.length>0 && grantResults[0]==PackageManager.PERMISSION_GRANTED)
+            {
+                Toast.makeText(Login_Activity.this, "Camera Permission Granted For Scanning QR", Toast.LENGTH_SHORT).show();
+            }
+            else{
+                Toast.makeText(Login_Activity.this, "Camera Permission Denied, Please Enable In Order To Scan", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        }
+    }
+
 
 }

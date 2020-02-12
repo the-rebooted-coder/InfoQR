@@ -1,9 +1,12 @@
 package com.devwings.info_qr;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.util.SparseArray;
@@ -30,6 +33,7 @@ public class Scan_Activity extends AppCompatActivity {
     private Button bugbtn;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,8 +41,6 @@ public class Scan_Activity extends AppCompatActivity {
 
         surfaceView = (SurfaceView)findViewById(R.id.camerapreview);
         textView4 = (TextView)findViewById(R.id.textView4);
-        barcodeDetector = new BarcodeDetector.Builder(this)
-                .setBarcodeFormats(Barcode.QR_CODE) .build();
 
         bugbtn = findViewById(R.id.button7);
         bugbtn.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +49,9 @@ public class Scan_Activity extends AppCompatActivity {
                 moveToReportPage();
             }
         });
+
+        barcodeDetector = new BarcodeDetector.Builder(this)
+                .setBarcodeFormats(Barcode.QR_CODE) .build();
 
 
         cameraSource = new CameraSource.Builder(this, barcodeDetector)
@@ -70,7 +75,7 @@ public class Scan_Activity extends AppCompatActivity {
 
             @Override
             public void surfaceDestroyed(SurfaceHolder surfaceHolder) {
-            cameraSource.stop();
+                cameraSource.stop();
             }
         });
 
@@ -99,10 +104,12 @@ public class Scan_Activity extends AppCompatActivity {
         });
 
     }
+
     private void moveToReportPage(){
 
         Intent intent = new Intent(Scan_Activity.this, Report_a_Bug.class);
         startActivity(intent);
     }
+
 }
 //This is a check for GitHub//
