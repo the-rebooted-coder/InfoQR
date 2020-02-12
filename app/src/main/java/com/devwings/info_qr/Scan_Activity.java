@@ -39,6 +39,8 @@ public class Scan_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scan);
 
+        final Vibrator vibe = (Vibrator) Scan_Activity.this.getSystemService(Context.VIBRATOR_SERVICE);
+
         surfaceView = (SurfaceView)findViewById(R.id.camerapreview);
         textView4 = (TextView)findViewById(R.id.textView4);
 
@@ -46,6 +48,7 @@ public class Scan_Activity extends AppCompatActivity {
         bugbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                vibe.vibrate(80);
                 moveToReportPage();
             }
         });

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">info_qr</string>
+    <string name="app_name">Info QeR</string>
     <string name="sign_out">Sign Out</string>
     <string name="welcome">WELCOME TO InfoQR</string>
     <string name="infoqr">INFO QR</string>
@@ -11,4 +11,6 @@
     <string name="recent_scans_scan_activity">Recent Scans</string>
     <string name="cutebugimage">cuteBugImage</string>
     <string name="quote">One of the basic rules of the universe is that nothing is perfect</string>
+    <string name="top_bar_colored">top_bar_colored</string>
+    <string name="bottom_bar_colored">bottom_bar_colored</string>
 </resources>
