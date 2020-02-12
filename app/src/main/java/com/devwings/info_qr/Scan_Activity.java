@@ -88,3 +88,4 @@ public class Scan_Activity extends AppCompatActivity {
 
     }
 }
+//This is a check for GitHub//
