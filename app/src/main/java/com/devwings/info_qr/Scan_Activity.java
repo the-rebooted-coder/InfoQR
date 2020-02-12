@@ -3,11 +3,14 @@ package com.devwings.info_qr;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.util.SparseArray;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.gms.vision.CameraSource;
@@ -24,6 +27,7 @@ public class Scan_Activity extends AppCompatActivity {
     CameraSource cameraSource;
     TextView textView4;
     BarcodeDetector barcodeDetector;
+    private Button bugbtn;
 
 
     @Override
@@ -33,9 +37,16 @@ public class Scan_Activity extends AppCompatActivity {
 
         surfaceView = (SurfaceView)findViewById(R.id.camerapreview);
         textView4 = (TextView)findViewById(R.id.textView4);
-
         barcodeDetector = new BarcodeDetector.Builder(this)
                 .setBarcodeFormats(Barcode.QR_CODE) .build();
+
+        bugbtn = findViewById(R.id.button7);
+        bugbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                moveToReportPage();
+            }
+        });
 
 
         cameraSource = new CameraSource.Builder(this, barcodeDetector)
@@ -87,6 +98,11 @@ public class Scan_Activity extends AppCompatActivity {
             }
         });
 
+    }
+    private void moveToReportPage(){
+
+        Intent intent = new Intent(Scan_Activity.this, Report_a_Bug.class);
+        startActivity(intent);
     }
 }
 //This is a check for GitHub//

@@ -66,6 +66,7 @@ public class Login_Activity extends AppCompatActivity {
                 btnSignOut.setVisibility(View.INVISIBLE);
             }
         });
+
     }
 
     private void signIn(){

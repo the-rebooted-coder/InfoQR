@@ -5,4 +5,10 @@
     <string name="infoqr">INFO QR</string>
     <string name="developer">From DevWings</string>
     <string name="before_scan">Focus on a QR</string>
+    <string name="user_on_scan">User</string>
+    <string name="report_a_bug_scan">Report a Bug</string>
+    <string name="generate_qr_scan">Generate QR</string>
+    <string name="recent_scans_scan_activity">Recent Scans</string>
+    <string name="cutebugimage">cuteBugImage</string>
+    <string name="quote">One of the basic rules of the universe is that nothing is perfect</string>
 </resources>
