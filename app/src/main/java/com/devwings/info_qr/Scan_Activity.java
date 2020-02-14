@@ -53,6 +53,7 @@ public class Scan_Activity extends AppCompatActivity {
             }
         });
 
+
         barcodeDetector = new BarcodeDetector.Builder(this)
                 .setBarcodeFormats(Barcode.QR_CODE) .build();
 
