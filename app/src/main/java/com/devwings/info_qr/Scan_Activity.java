@@ -31,6 +31,7 @@ public class Scan_Activity extends AppCompatActivity {
     TextView textView4;
     BarcodeDetector barcodeDetector;
     private Button bugbtn;
+    private Button userbtn;
 
 
 
@@ -43,8 +44,16 @@ public class Scan_Activity extends AppCompatActivity {
 
         surfaceView = (SurfaceView)findViewById(R.id.camerapreview);
         textView4 = (TextView)findViewById(R.id.textView4);
+        userbtn=findViewById(R.id.button5);
+        userbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                moveToUserPage();
+            }
+        });
 
         bugbtn = findViewById(R.id.button7);
+
         bugbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -112,6 +121,28 @@ public class Scan_Activity extends AppCompatActivity {
     private void moveToReportPage(){
 
         Intent intent = new Intent(Scan_Activity.this, Report_a_Bug.class);
+        startActivity(intent);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    private void moveToUserPage(){
+        Intent intent=new Intent(Scan_Activity.this,User_Info.class);
         startActivity(intent);
     }
 
