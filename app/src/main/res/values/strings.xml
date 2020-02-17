@@ -8,7 +8,7 @@
     <string name="user_on_scan">User</string>
     <string name="report_a_bug_scan">Report a Bug</string>
     <string name="generate_qr_scan">Generate QR</string>
-    <string name="recent_scans_scan_activity">Recent Scans</string>
+    <string name="recent_scans_scan_activity">Manual Update</string>
     <string name="cutebugimage">cuteBugImage</string>
     <string name="quote">One of the basic rules of the universe is that nothing is perfect</string>
     <string name="top_bar_colored">top_bar_colored</string>

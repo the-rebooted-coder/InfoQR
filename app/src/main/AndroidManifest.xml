@@ -13,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".User_Info"></activity>
+        <activity android:name=".Manual_Update"></activity>
         <activity android:name=".Report_a_Bug" />
         <activity android:name=".Scan_Activity" />
         <activity android:name=".Login_Activity" />

@@ -32,6 +32,7 @@ public class Scan_Activity extends AppCompatActivity {
     BarcodeDetector barcodeDetector;
     private Button bugbtn;
     private Button userbtn;
+    private Button man_updt;
 
 
 
@@ -44,6 +45,9 @@ public class Scan_Activity extends AppCompatActivity {
 
         surfaceView = (SurfaceView)findViewById(R.id.camerapreview);
         textView4 = (TextView)findViewById(R.id.textView4);
+
+        bugbtn = findViewById(R.id.button7);
+
         userbtn=findViewById(R.id.button5);
         userbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,14 +55,22 @@ public class Scan_Activity extends AppCompatActivity {
                 moveToUserPage();
             }
         });
-
-        bugbtn = findViewById(R.id.button7);
-
         bugbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 vibe.vibrate(80);
                 moveToReportPage();
+
+
+
+                man_updt = findViewById(R.id.man_updt);
+                man_updt.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        moveToManualUpdatePage();
+                    }
+                });
+
             }
         });
 
@@ -123,28 +135,19 @@ public class Scan_Activity extends AppCompatActivity {
         Intent intent = new Intent(Scan_Activity.this, Report_a_Bug.class);
         startActivity(intent);
     }
+    private void moveToManualUpdatePage(){
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        Intent intent = new Intent(Scan_Activity.this, Manual_Update.class);
+        startActivity(intent);
+    }
 
     private void moveToUserPage(){
         Intent intent=new Intent(Scan_Activity.this,User_Info.class);
         startActivity(intent);
     }
+
+
+
 
 }
 //This is a check for GitHub//
