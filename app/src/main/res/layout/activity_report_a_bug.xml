@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/common_google_signin_btn_text_dark_default"
+    android:background="@drawable/sky_back"
     tools:context=".Report_a_Bug">
 
 
@@ -15,6 +15,7 @@
         android:fontFamily="@font/concert_one"
         android:text="@string/to_email"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
         app:layout_constraintBottom_toTopOf="@+id/edit_text_to"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -29,6 +30,7 @@
         android:autofillHints=""
         android:inputType="textEmailAddress"
         android:text="@string/dev_email"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -43,6 +45,7 @@
         android:fontFamily="@font/concert_one"
         android:text="@string/subject"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -54,15 +57,16 @@
         android:id="@+id/edit_text_subject"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:inputType="textEmailSubject"
         android:text="@string/sub_line"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textView5"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.278"
-        android:autofillHints="" />
+        app:layout_constraintVertical_bias="0.278" />
 
     <TextView
         android:id="@+id/textView7"
@@ -71,6 +75,7 @@
         android:fontFamily="@font/concert_one"
         android:text="@string/err_desc"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -82,16 +87,17 @@
         android:id="@+id/edit_text_message"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:gravity="start|top"
         android:inputType="textLongMessage|textAutoCorrect|textMultiLine"
         android:lines="10"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.641"
-        android:autofillHints="" />
+        app:layout_constraintVertical_bias="0.641" />
 
     <Button
         android:id="@+id/button_send"
@@ -110,6 +116,7 @@
         android:layout_height="17dp"
         android:text="@string/quote"
         android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
