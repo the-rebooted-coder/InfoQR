@@ -46,7 +46,7 @@ public class Manual_Update extends AppCompatActivity {
         mDocRef.set(dataToSave).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
-                Log.d(TAG, "Document has Been Saved!");
+                Log.d(TAG, "Document Has Been Saved!");
 
             }
         }).addOnFailureListener(new OnFailureListener() {
@@ -57,3 +57,16 @@ public class Manual_Update extends AppCompatActivity {
         });
     }
 }
+
+
+
+/*
+ _____           __          ___
+ |  __ \          \ \        / (_)
+ | |  | | _____   _\ \  /\  / / _ _ __   __ _ ___
+ | |  | |/ _ \ \ / /\ \/  \/ / | | '_ \ / _` / __|
+ | |__| |  __/\ V /  \  /\  /  | | | | | (_| \__ \
+ |_____/ \___| \_/    \/  \/   |_|_| |_|\__, |___/
+                                         __/ |
+                                        |___/
+ */
