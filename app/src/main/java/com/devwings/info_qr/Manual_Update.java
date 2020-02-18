@@ -23,7 +23,7 @@ public class Manual_Update extends AppCompatActivity {
     public static final String QUOTE_KEY = "quote";
     public static final String TAG = "Inspiring Quote";
 
-    private DocumentReference mDocRef = FirebaseFirestore.getInstance().document("sampleData/inspiration");
+    private DocumentReference mDocRef = FirebaseFirestore.getInstance().document("Equipments/inspiration");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
