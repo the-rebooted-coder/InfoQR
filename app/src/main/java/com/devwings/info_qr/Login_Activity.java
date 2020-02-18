@@ -133,7 +133,7 @@ public class Login_Activity extends AppCompatActivity {
             String personEmail = account.getEmail();
             String personId = account.getId();
             Uri personPhoto = account.getPhotoUrl();
-            Toast.makeText(Login_Activity.this,"Welcome"+personName,Toast.LENGTH_SHORT).show();
+            Toast.makeText(Login_Activity.this,"Welcome "+personName,Toast.LENGTH_SHORT).show();
             startActivity(new Intent(Login_Activity.this, Scan_Activity.class));
             finish();
         }

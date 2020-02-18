@@ -3,3 +3,15 @@
     <background android:drawable="@color/ic_launcher_background"/>
     <foreground android:drawable="@mipmap/ic_launcher_foreground"/>
 </adaptive-icon>
+
+
+    <!--
+      _____           __          ___
+     |  __ \          \ \        / (_)
+     | |  | | _____   _\ \  /\  / / _ _ __   __ _ ___
+     | |  | |/ _ \ \ / /\ \/  \/ / | | '_ \ / _` / __|
+     | |__| |  __/\ V /  \  /\  /  | | | | | (_| \__ \
+     |_____/ \___| \_/    \/  \/   |_|_| |_|\__, |___/
+                                             __/ |
+                                            |___/
+    -->

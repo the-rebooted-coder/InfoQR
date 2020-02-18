@@ -46,3 +46,15 @@ public class Report_a_Bug extends AppCompatActivity {
         startActivity(Intent.createChooser(intent, "Choose an email client"));
     }
 }
+
+
+/*
+ _____           __          ___
+ |  __ \          \ \        / (_)
+ | |  | | _____   _\ \  /\  / / _ _ __   __ _ ___
+ | |  | |/ _ \ \ / /\ \/  \/ / | | '_ \ / _` / __|
+ | |__| |  __/\ V /  \  /\  /  | | | | | (_| \__ \
+ |_____/ \___| \_/    \/  \/   |_|_| |_|\__, |___/
+                                         __/ |
+                                        |___/
+ */
