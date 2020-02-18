@@ -7,32 +7,19 @@
     tools:context=".Manual_Update">
 
     <EditText
-        android:id="@+id/editTextQuote"
-        android:layout_width="323dp"
-        android:layout_height="146dp"
-        android:layout_marginTop="87dp"
+        android:id="@+id/editEquipName"
+        android:layout_width="338dp"
+        android:layout_height="104dp"
+        android:layout_marginBottom="148dp"
+        android:cursorVisible="true"
         android:fontFamily="@font/google_sans"
-        android:hint="Add Text Here"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextAuthor"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <EditText
-        android:id="@+id/editTextAuthor"
-        android:layout_width="319dp"
-        android:layout_height="155dp"
-        android:fontFamily="@font/google_sans"
-        android:hint="Add Text Here"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:hint="Enter Equipment Name Here!"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/textViewInspiring"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.289" />
+        app:layout_constraintTop_toBottomOf="@+id/editEquipID" />
 
     <Button
         android:id="@+id/button"
@@ -53,7 +40,7 @@
         android:layout_width="103dp"
         android:layout_height="49dp"
         android:fontFamily="@font/google_sans"
-        android:onClick="saveQuote"
+        android:onClick="fetchQuote"
         android:text="Fetch"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,11 +57,28 @@
         android:hint="Fetched Data Will Be Displayed Here"
         android:textAlignment="center"
         android:textColor="@color/common_google_signin_btn_text_dark_focused"
-        android:textSize="15sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextQuote" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.719" />
+
+    <EditText
+        android:id="@+id/editEquipID"
+        android:layout_width="259dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:hint="Enter Equipment ID Here!"
+        android:inputType="numberSigned"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.205" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
