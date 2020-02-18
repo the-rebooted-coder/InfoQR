@@ -32,10 +32,10 @@ public class Manual_Update extends AppCompatActivity {
     }
 
     public void saveQuote (View view) {
-        TextView quoteView = (TextView) findViewById(R.id.editTextQuote);
-        TextView authorView = (TextView) findViewById(R.id.editTextAuthor);
+        EditText quoteView = (EditText) findViewById(R.id.editTextQuote);
+        EditText authorView = (EditText) findViewById(R.id.editTextAuthor);
         String quoteText = quoteView.getText().toString();
-        String authorText = quoteView.getText().toString();
+        String authorText = authorView.getText().toString();
 
         if (quoteText.isEmpty() || authorText.isEmpty()){
             return;
