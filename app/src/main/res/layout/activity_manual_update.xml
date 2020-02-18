@@ -8,47 +8,74 @@
 
     <EditText
         android:id="@+id/editTextQuote"
-        android:layout_width="346dp"
-        android:layout_height="264dp"
-        android:layout_marginStart="177dp"
-        android:layout_marginTop="270dp"
-        android:layout_marginEnd="177dp"
-        android:layout_marginBottom="534dp"
-        android:text="TextView"
+        android:layout_width="323dp"
+        android:layout_height="146dp"
+        android:layout_marginTop="87dp"
+        android:fontFamily="@font/google_sans"
+        android:hint="Add Text Here"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextAuthor"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/editTextAuthor"
-        android:layout_width="330dp"
-        android:layout_height="216dp"
-        android:layout_marginStart="172dp"
-        android:layout_marginTop="161dp"
-        android:layout_marginEnd="182dp"
-        android:layout_marginBottom="231dp"
-        android:text="TextView"
+        android:layout_width="319dp"
+        android:layout_height="155dp"
+        android:fontFamily="@font/google_sans"
+        android:hint="Add Text Here"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.289" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="103dp"
+        android:layout_height="49dp"
+        android:fontFamily="@font/google_sans"
+        android:onClick="saveQuote"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.256"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.073" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="103dp"
+        android:layout_height="49dp"
+        android:fontFamily="@font/google_sans"
+        android:onClick="saveQuote"
+        android:text="Fetch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.824"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.073" />
+
+    <TextView
+        android:id="@+id/textViewInspiring"
+        android:layout_width="220dp"
+        android:layout_height="103dp"
+        android:fontFamily="@font/google_sans"
+        android:hint="Fetched Data Will Be Displayed Here"
+        android:textAlignment="center"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextQuote" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="63dp"
-        android:layout_marginEnd="163dp"
-        android:layout_marginBottom="36dp"
-        android:onClick="saveQuote"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/editTextQuote"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
