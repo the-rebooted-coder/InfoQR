@@ -61,16 +61,23 @@ public class Scan_Activity extends AppCompatActivity {
                 vibe.vibrate(80);
                 moveToReportPage();
 
+            }
+        });
+        man_updt = findViewById(R.id.man_updt);
+        man_updt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                moveToManualUpdatePage();
+            }
+        });
 
 
-                man_updt = findViewById(R.id.man_updt);
-                man_updt.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        moveToManualUpdatePage();
-                    }
-                });
 
+        userbtn=findViewById(R.id.button5);
+        userbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                moveToUserPage();
             }
         });
 
