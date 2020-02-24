@@ -33,8 +33,7 @@ public class Scan_Activity extends AppCompatActivity {
     private Button bugbtn;
     private Button userbtn;
     private Button man_updt;
-
-
+    private Button genqr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +48,7 @@ public class Scan_Activity extends AppCompatActivity {
         bugbtn = findViewById(R.id.button7);
         userbtn=findViewById(R.id.button5);
         man_updt=findViewById(R.id.man_updt);
+        genqr=findViewById(R.id.button6);
         bugbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,8 +67,16 @@ public class Scan_Activity extends AppCompatActivity {
                 moveToManualUpdatePage();
             }
         });
-        barcodeDetector = new BarcodeDetector.Builder(this)
-                .setBarcodeFormats(Barcode.QR_CODE) .build();
+        genqr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                moveToGenqrPage();
+            }
+        });
+
+
+                barcodeDetector = new BarcodeDetector.Builder(this)
+                        .setBarcodeFormats(Barcode.QR_CODE).build();
 
 
         cameraSource = new CameraSource.Builder(this, barcodeDetector)
@@ -135,6 +143,10 @@ public class Scan_Activity extends AppCompatActivity {
 
     private void moveToUserPage(){
         Intent intent=new Intent(Scan_Activity.this,User_Info.class);
+        startActivity(intent);
+    }
+    private void moveToGenqrPage(){
+        Intent intent = new Intent(Scan_Activity.this, Gen_Activity.class);
         startActivity(intent);
     }
 
