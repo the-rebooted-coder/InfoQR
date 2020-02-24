@@ -11,11 +11,13 @@
         android:layout_width="338dp"
         android:layout_height="104dp"
         android:layout_marginBottom="148dp"
+        android:autoText="false"
         android:background="@drawable/roundedback"
         android:cursorVisible="true"
         android:fontFamily="@font/google_sans"
         android:hint="Enter Equipment Name Here!"
         android:inputType="textLongMessage"
+        android:selectAllOnFocus="true"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/textViewInspiring"
         app:layout_constraintEnd_toEndOf="parent"
@@ -84,9 +86,10 @@
         app:layout_constraintVertical_bias="0.17" />
 
     <EditText
-        android:id="@+id/editEquipService"
+        android:id="@+id/aa"
         android:layout_width="259dp"
         android:layout_height="43dp"
+        android:autofillHints=""
         android:background="@drawable/roundedback"
         android:ems="10"
         android:hint="Enter Equipment ID Here!"
@@ -98,6 +101,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.43" />
+
+    <EditText
+        android:id="@+id/editEquipService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundedback"
+        android:ems="10"
+        android:hint="Enter Equipment ID Here!"
+        android:inputType="date"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.529" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
