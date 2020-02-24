@@ -13,8 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Gen_Qr"></activity>
-        <activity android:name=".User_Info" />
+        <activity android:name=".User_Info"></activity>
         <activity android:name=".Manual_Update" />
         <activity android:name=".Report_a_Bug" />
         <activity android:name=".Scan_Activity" />
@@ -36,14 +35,3 @@
     </application>
 
 </manifest>
-
-    <!--
-      _____           __          ___
-     |  __ \          \ \        / (_)
-     | |  | | _____   _\ \  /\  / / _ _ __   __ _ ___
-     | |  | |/ _ \ \ / /\ \/  \/ / | | '_ \ / _` / __|
-     | |__| |  __/\ V /  \  /\  /  | | | | | (_| \__ \
-     |_____/ \___| \_/    \/  \/   |_|_| |_|\__, |___/
-                                             __/ |
-                                            |___/
-    -->

@@ -1,9 +1,12 @@
 package com.devwings.info_qr;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.util.SparseArray;
@@ -30,7 +33,6 @@ public class Scan_Activity extends AppCompatActivity {
     private Button bugbtn;
     private Button userbtn;
     private Button man_updt;
-    private Button gen_qr;
 
 
 
@@ -47,7 +49,6 @@ public class Scan_Activity extends AppCompatActivity {
         bugbtn = findViewById(R.id.button7);
         userbtn=findViewById(R.id.button5);
         man_updt=findViewById(R.id.man_updt);
-        gen_qr=findViewById(R.id.gen_qr);
         bugbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,12 +65,6 @@ public class Scan_Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 moveToManualUpdatePage();
-            }
-        });
-        gen_qr.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                moveToGenerateQr();
             }
         });
         barcodeDetector = new BarcodeDetector.Builder(this)
@@ -140,10 +135,6 @@ public class Scan_Activity extends AppCompatActivity {
 
     private void moveToUserPage(){
         Intent intent=new Intent(Scan_Activity.this,User_Info.class);
-        startActivity(intent);
-    }
-    private void moveToGenerateQr(){
-        Intent intent=new Intent(Scan_Activity.this, Gen_Qr.class);
         startActivity(intent);
     }
 
