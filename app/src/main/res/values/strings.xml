@@ -20,6 +20,8 @@
     <string name="sub_line">Bug in the App InfoQR</string>
     <string name="subject">Subject:</string>
     <string name="copyright">Copyright (c) 2020 DevWings</string>
+    <string name="fetch">Fetch</string>
+    <string name="save">Save</string>
 </resources>
 
 

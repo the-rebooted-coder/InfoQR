@@ -1,6 +1,7 @@
 package com.devwings.info_qr;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -24,7 +25,7 @@ public class Manual_Update extends AppCompatActivity {
 
     public static final String EQUIP_ID = "id";
     public static final String EQUIP_NAME = "name";
-    public static final String TAG = "Inspiring Quote";
+    public static final String DATE = "date";
 
     TextView mQuoteTextView;
 
@@ -46,7 +47,8 @@ public class Manual_Update extends AppCompatActivity {
 
                     String equip_id = documentSnapshot.getString(EQUIP_ID);
                     String equip_name = documentSnapshot.getString(EQUIP_NAME);
-                    mQuoteTextView.setText("\"ID:- " +System.getProperty("line.separator")+ equip_id + System.getProperty("line.separator")+"\" Equip Name:- "+System.getProperty("line.separator") + equip_name);
+                    String equip_date = documentSnapshot.getString(DATE);
+                    mQuoteTextView.setText("\"ID:- " +System.getProperty("line.separator")+ equip_id + System.getProperty("line.separator")+"\" Equip Name:- "+System.getProperty("line.separator") + equip_name + System.getProperty("line.separator")+"\" Last Service Date:- "+System.getProperty("line.separator") + equip_date);
                     Toast.makeText(Manual_Update.this, "Data Fetch Successful!", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -57,8 +59,10 @@ public class Manual_Update extends AppCompatActivity {
     public void saveQuote (View view) {
         EditText equipID_View = (EditText) findViewById(R.id.editEquipID);
         EditText equipNAMEView = (EditText) findViewById(R.id.editEquipName);
+        EditText equipDATEView = (EditText) findViewById(R.id.editEquipService);
         String quoteText = equipID_View.getText().toString();
         String authorText = equipNAMEView.getText().toString();
+        String detailText = equipDATEView.getText().toString();
 
         if (quoteText.isEmpty() || authorText.isEmpty()){
             return;
@@ -66,6 +70,7 @@ public class Manual_Update extends AppCompatActivity {
         Map<String, Object> dataToSave = new HashMap<String, Object>();
         dataToSave.put(EQUIP_ID, quoteText);
         dataToSave.put(EQUIP_NAME, authorText);
+        dataToSave.put(DATE, detailText);
         mDocRef.set(dataToSave).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
