@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,12 +11,6 @@
         android:id="@+id/editEquipName"
         android:layout_width="338dp"
         android:layout_height="104dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="309dp"
-        android:layout_marginBottom="318dp"
         android:autoText="false"
         android:background="@drawable/roundedback"
         android:cursorVisible="true"
@@ -25,20 +19,17 @@
         android:inputType="textLongMessage"
         android:selectAllOnFocus="true"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/textViewInspiring"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editEquipID" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.448" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="103dp"
         android:layout_height="49dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
         android:layout_marginStart="48dp"
         android:layout_marginTop="29dp"
         android:layout_marginEnd="261dp"
@@ -58,10 +49,6 @@
         android:id="@+id/button3"
         android:layout_width="103dp"
         android:layout_height="49dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
         android:layout_marginStart="267dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="41dp"
@@ -81,10 +68,6 @@
         android:id="@+id/textViewInspiring"
         android:layout_width="239dp"
         android:layout_height="198dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="93dp"
-        android:layout_marginBottom="45dp"
         android:fontFamily="@font/google_sans"
         android:hint="Fetched Data Will Be Displayed Here"
         android:textAlignment="center"
@@ -94,44 +77,30 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.836" />
+        app:layout_constraintTop_toBottomOf="@+id/editEquipService" />
 
     <EditText
         android:id="@+id/editEquipID"
         android:layout_width="259dp"
         android:layout_height="43dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
         android:layout_marginStart="76dp"
-        android:layout_marginTop="247dp"
         android:layout_marginEnd="76dp"
-        android:layout_marginBottom="441dp"
         android:background="@drawable/roundedback"
+        android:cursorVisible="false"
         android:ems="10"
         android:hint="Enter Equipment ID Here!"
         android:inputType="numberSigned"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/editEquipName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.17" />
+        app:layout_constraintVertical_bias="0.88" />
 
     <EditText
         android:id="@+id/editEquipService"
         android:layout_width="315dp"
         android:layout_height="48dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="429dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="255dp"
         android:autofillHints=""
         android:background="@drawable/roundedback"
         android:ems="10"
@@ -140,12 +109,11 @@
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.519"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.43" />
+        app:layout_constraintTop_toBottomOf="@+id/editEquipName"
+        app:layout_constraintVertical_bias="0.181" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <!--

@@ -154,7 +154,17 @@ public class Scan_Activity extends AppCompatActivity {
     }
 
     public void grasp(View view) {
-        
+        String data1 = "This is data 1";
+
+        String data2 = "This is data 2";
+
+        Intent passdata_intent = new Intent(this, Manual_Update.class);
+
+        passdata_intent.putExtra("firstdata", data1);
+        passdata_intent.putExtra("seconddata", data2);
+
+        startActivity(passdata_intent);
+
     }
 
 
