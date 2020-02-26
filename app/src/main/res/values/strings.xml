@@ -4,7 +4,7 @@
     <string name="welcome">WELCOME TO InfoQR</string>
     <string name="infoqr">INFO QR</string>
     <string name="developer">From DevWings</string>
-    <string name="before_scan">Focus on a QR</string>
+    <string name="before_scan">Point on a QR</string>
     <string name="user_on_scan">User Details</string>
     <string name="report_a_bug_scan">Report a Bug</string>
     <string name="generate_qr_scan">Generate QR</string>
@@ -19,7 +19,7 @@
     <string name="dev_email">spandansaxena@gmail.com</string>
     <string name="sub_line">Bug in the App InfoQR</string>
     <string name="subject">Subject:</string>
-    <string name="copyright">Copyright (c) 2020 DevWings</string>
+    <string name="copyright">Copyright © 2020 DevWings</string>
     <string name="fetch">Fetch</string>
     <string name="save">Save</string>
 </resources>
