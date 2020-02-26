@@ -15,11 +15,14 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.vision.CameraSource;
 import com.google.android.gms.vision.Detector;
 import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.io.IOException;
 
@@ -150,7 +153,9 @@ public class Scan_Activity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
+    public void grasp(View view) {
+        
+    }
 
 
 }

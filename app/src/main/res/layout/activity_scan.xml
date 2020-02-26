@@ -28,10 +28,8 @@
         android:background="@color/common_google_signin_btn_text_dark_default"
         android:clickable="true"
         android:contextClickable="true"
-        android:editable="true"
-        android:focusable="true"
+        android:editable="false"
         android:linksClickable="true"
-        android:longClickable="true"
         android:text="@string/before_scan"
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
@@ -40,7 +38,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.98" />
+        app:layout_constraintVertical_bias="0.98"
+        android:enabled="true"
+        android:textIsSelectable="true"
+        android:focusable="true"
+        android:longClickable="true"
+        android:onClick="grasp"
+        />
+
 
     <Button
         android:id="@+id/button5"
