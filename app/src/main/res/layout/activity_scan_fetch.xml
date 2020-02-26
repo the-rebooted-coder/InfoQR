@@ -20,6 +20,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--
+      _____           __          ___
+     |  __ \          \ \        / (_)
+     | |  | | _____   _\ \  /\  / / _ _ __   __ _ ___
+     | |  | |/ _ \ \ / /\ \/  \/ / | | '_ \ / _` / __|
+     | |__| |  __/\ V /  \  /\  /  | | | | | (_| \__ \
+     |_____/ \___| \_/    \/  \/   |_|_| |_|\__, |___/
+                                             __/ |
+                                            |___/
+    -->
 </androidx.constraintlayout.widget.ConstraintLayout>
