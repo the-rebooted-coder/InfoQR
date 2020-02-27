@@ -24,7 +24,7 @@ public class Gen_Activity extends AppCompatActivity {
     String TAG="GenerateQrCode";
     EditText equipmentid;
     ImageView qrimage;
-    Button genqr;
+    Button genqr,savebtn;
     Bitmap bitmap;
     QRGEncoder qrgEncoder;
     String inputvalue;
@@ -36,6 +36,7 @@ public class Gen_Activity extends AppCompatActivity {
         equipmentid=(EditText) findViewById(R.id.equipmentid);
         qrimage=(ImageView)findViewById(R.id.qrimage);
         genqr=(Button)findViewById(R.id.genqrbtn);
+        savebtn=(Button)findViewById(R.id.butnsave);
         genqr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,7 +55,7 @@ public class Gen_Activity extends AppCompatActivity {
                     try {
                         bitmap=qrgEncoder.encodeAsBitmap();
                         qrimage.setImageBitmap(bitmap);
-                        Toast.makeText(Gen_Activity.this, "QR generated successfully", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Gen_Activity.this, "QR Generated Successfully", Toast.LENGTH_SHORT).show();
                     }
                     catch (WriterException e)
                     {
@@ -62,7 +63,7 @@ public class Gen_Activity extends AppCompatActivity {
                     }
                 }
                 else{
-                    equipmentid.setError("REQUIRED");
+                    equipmentid.setError("Not to be Blank!");
                 }
 
 

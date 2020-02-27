@@ -36,18 +36,34 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.678" />
+        app:layout_constraintVertical_bias="0.627" />
 
     <Button
         android:id="@+id/genqrbtn"
         android:layout_width="109dp"
         android:layout_height="58dp"
         android:background="@drawable/roundedbutton"
+        android:fontFamily="@font/google_sans"
         android:text="@string/generate_qr_scan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.208"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.952" />
+        app:layout_constraintVertical_bias="0.91" />
+
+    <Button
+        android:id="@+id/butnsave"
+        android:layout_width="109dp"
+        android:layout_height="58dp"
+        android:background="@drawable/roundedbutton"
+        android:fontFamily="@font/google_sans"
+        android:text="@string/save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.771"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.91" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
