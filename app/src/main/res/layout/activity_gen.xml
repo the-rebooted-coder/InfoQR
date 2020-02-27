@@ -4,5 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/common_google_signin_btn_text_dark_default"
-    tools:context=".Gen_Activity"/>
+    android:background="@color/common_google_signin_btn_text_dark_focused"
+    tools:context=".Gen_Activity">
+
+    <ImageView
+        android:id="@+id/qrimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.197"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <EditText
+        android:id="@+id/equipmentid"
+        android:layout_width="343dp"
+        android:layout_height="68dp"
+        android:background="@drawable/roundedback"
+        android:ems="10"
+        android:fontFamily="@font/google_sans"
+        android:hint="Enter Equipment ID"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="@color/common_google_signin_btn_text_dark_pressed"
+        android:textColorHint="@color/common_google_signin_btn_text_dark_focused"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/genqrbtn"
+        android:layout_width="109dp"
+        android:layout_height="58dp"
+        android:background="@drawable/roundedbutton"
+        android:text="@string/generate_qr_scan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.67" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
