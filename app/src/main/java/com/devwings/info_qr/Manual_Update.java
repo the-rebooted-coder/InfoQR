@@ -22,7 +22,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Manual_Update extends AppCompatActivity {
-
     public static final String EQUIP_ID = "id";
     public static final String EQUIP_NAME = "name";
     public static final String DATE = "date";
