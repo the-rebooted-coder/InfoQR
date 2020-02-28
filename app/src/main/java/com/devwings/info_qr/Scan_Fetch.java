@@ -21,6 +21,8 @@ public class Scan_Fetch extends AppCompatActivity {
         textView.setText(data_1);
 
 
+
+
     }
 }
 
