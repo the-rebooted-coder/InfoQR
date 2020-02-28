@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Bitmap;
 import android.graphics.Point;
+import android.graphics.drawable.Drawable;
 import android.hardware.display.DisplayManager;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.Display;
 import android.view.View;
@@ -28,6 +31,9 @@ public class Gen_Activity extends AppCompatActivity {
     Bitmap bitmap;
     QRGEncoder qrgEncoder;
     String inputvalue;
+    Uri URI;
+    String ImagePath;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +61,7 @@ public class Gen_Activity extends AppCompatActivity {
                     try {
                         bitmap=qrgEncoder.encodeAsBitmap();
                         qrimage.setImageBitmap(bitmap);
+
                         Toast.makeText(Gen_Activity.this, "QR Generated Successfully", Toast.LENGTH_SHORT).show();
                     }
                     catch (WriterException e)
@@ -69,6 +76,23 @@ public class Gen_Activity extends AppCompatActivity {
 
             }
         });
+        savebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ImagePath = MediaStore.Images.Media.insertImage(
+                        getContentResolver(),
+                        bitmap,
+                        "qr_image",
+                        "qr_image"
+                );
+
+                URI = Uri.parse(ImagePath);
+
+                Toast.makeText(Gen_Activity.this, "Image Saved Successfully", Toast.LENGTH_LONG).show();
+
+            }
+        });
+
 
 
 
