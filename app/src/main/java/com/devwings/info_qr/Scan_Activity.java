@@ -81,8 +81,10 @@ public class Scan_Activity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(Scan_Activity.this, "Refocusing, Please Wait", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Scan_Activity.this, Scan_Activity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
