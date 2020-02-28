@@ -21,6 +21,7 @@ import com.google.android.gms.vision.CameraSource;
 import com.google.android.gms.vision.Detector;
 import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -74,6 +75,14 @@ public class Scan_Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 moveToGenqrPage();
+            }
+        });
+        FloatingActionButton fab = findViewById(R.id.refocus);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Scan_Activity.this, Scan_Activity.class);
+                startActivity(intent);
             }
         });
 
