@@ -10,9 +10,11 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.drawable.AnimationDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -44,10 +46,12 @@ public class Login_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_login);
         signInButton = findViewById(R.id.signInButton);
         mAuth = FirebaseAuth.getInstance();
         btnSignOut = findViewById(R.id.sign_out_button);
+
 
         // Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -127,11 +131,6 @@ public class Login_Activity extends AppCompatActivity {
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(getApplicationContext());
         if (account != null){
             String personName = account.getDisplayName();
-            String personGivenName = account.getGivenName();
-            String personFamilyName = account.getFamilyName();
-            String personEmail = account.getEmail();
-            String personId = account.getId();
-            Uri personPhoto = account.getPhotoUrl();
             Toast.makeText(Login_Activity.this,"Welcome "+personName,Toast.LENGTH_SHORT).show();
             startActivity(new Intent(Login_Activity.this, Scan_Activity.class));
             finish();
@@ -155,7 +154,7 @@ public class Login_Activity extends AppCompatActivity {
                 Toast.makeText(Login_Activity.this, "Camera Permission Granted For Scanning QR", Toast.LENGTH_SHORT).show();
             }
             else{
-                Toast.makeText(Login_Activity.this, "Camera Permission Denied, Please Enable In Order To Scan", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Login_Activity.this, "Camera Permission Denied, Please Enable In Order To Scan", Toast.LENGTH_LONG).show();
                 finish();
             }
         }

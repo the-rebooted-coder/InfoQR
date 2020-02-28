@@ -46,6 +46,7 @@ public class Manual_Update extends AppCompatActivity {
         mQuoteTextView = (TextView) findViewById(R.id.textViewInspiring);
     }
 
+
     public void fetchQuote(final View view){
 
         mDocRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
@@ -57,9 +58,8 @@ public class Manual_Update extends AppCompatActivity {
                     String equip_name = documentSnapshot.getString(EQUIP_NAME);
                     String equip_date = documentSnapshot.getString(DATE);
                     mQuoteTextView.setText("\"ID:- " +System.getProperty("line.separator")+ equip_id + System.getProperty("line.separator")+"\" Equip Name:- "+System.getProperty("line.separator") + equip_name + System.getProperty("line.separator")+"\" Last Service Date:- "+System.getProperty("line.separator") + equip_date);
-                    Toast.makeText(Manual_Update.this, "Data Fetch Successful!", Toast.LENGTH_SHORT).show();
                     Snackbar snackbar = Snackbar
-                            .make(view, "Establishing Secure Connection", Snackbar.LENGTH_SHORT);
+                            .make(view, "Secure 128 BIT Connection to Server Established", Snackbar.LENGTH_INDEFINITE);
                     snackbar.show();
                 }
             }
@@ -85,10 +85,11 @@ public class Manual_Update extends AppCompatActivity {
         mDocRef.set(dataToSave).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
-                Toast.makeText(Manual_Update.this, "Successfully Added to Database", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Manual_Update.this, "Added!", Toast.LENGTH_SHORT).show();
                 Snackbar snackbar = Snackbar
-                        .make(view, "Establishing Secure Connection", Snackbar.LENGTH_SHORT);
+                        .make(view, "Secure 128 BIT Connection to Server Established", Snackbar.LENGTH_INDEFINITE);
                 snackbar.show();
+
 
             }
         }).addOnFailureListener(new OnFailureListener() {
