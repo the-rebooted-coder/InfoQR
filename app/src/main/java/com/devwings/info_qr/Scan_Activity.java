@@ -22,6 +22,7 @@ import com.google.android.gms.vision.Detector;
 import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -69,6 +70,7 @@ public class Scan_Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 moveToManualUpdatePage();
+
             }
         });
         genqr.setOnClickListener(new View.OnClickListener() {
@@ -150,9 +152,9 @@ public class Scan_Activity extends AppCompatActivity {
         startActivity(intent);
     }
     private void moveToManualUpdatePage(){
-
         Intent intent = new Intent(Scan_Activity.this, Manual_Update.class);
         startActivity(intent);
+
     }
 
     private void moveToUserPage(){
