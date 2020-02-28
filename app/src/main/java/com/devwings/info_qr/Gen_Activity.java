@@ -23,7 +23,7 @@ import com.google.zxing.WriterException;
 import androidmads.library.qrgenearator.QRGContents;
 import androidmads.library.qrgenearator.QRGEncoder;
 
-public class Gen_Activity extends AppCompatActivity {
+public class  Gen_Activity extends AppCompatActivity {
     String TAG="GenerateQrCode";
     EditText equipmentid;
     ImageView qrimage;
@@ -88,7 +88,7 @@ public class Gen_Activity extends AppCompatActivity {
 
                 URI = Uri.parse(ImagePath);
 
-                Toast.makeText(Gen_Activity.this, "Image Saved Successfully", Toast.LENGTH_LONG).show();
+                Toast.makeText(Gen_Activity.this, "QR Saved Successfully", Toast.LENGTH_LONG).show();
 
             }
         });
@@ -98,3 +98,15 @@ public class Gen_Activity extends AppCompatActivity {
 
     }
 }
+
+
+/*
+ _____           __          ___
+ |  __ \          \ \        / (_)
+ | |  | | _____   _\ \  /\  / / _ _ __   __ _ ___
+ | |  | |/ _ \ \ / /\ \/  \/ / | | '_ \ / _` / __|
+ | |__| |  __/\ V /  \  /\  /  | | | | | (_| \__ \
+ |_____/ \___| \_/    \/  \/   |_|_| |_|\__, |___/
+                                         __/ |
+                                        |___/
+ */
