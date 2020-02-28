@@ -29,22 +29,21 @@
         android:clickable="true"
         android:contextClickable="true"
         android:editable="false"
+        android:enabled="true"
+        android:focusable="true"
         android:linksClickable="true"
+        android:longClickable="true"
+        android:onClick="grasp"
         android:text="@string/before_scan"
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
+        android:textIsSelectable="true"
         android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.98"
-        android:enabled="true"
-        android:textIsSelectable="true"
-        android:focusable="true"
-        android:longClickable="true"
-        android:onClick="grasp"
-        />
+        app:layout_constraintVertical_bias="0.98" />
 
 
     <Button
@@ -102,25 +101,26 @@
         android:text="@string/generate_qr_scan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.314"
+        app:layout_constraintHorizontal_bias="0.32"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:drawable/ic_menu_search"
-        android:contextClickable="true"
-        app:backgroundTint="@color/common_google_signin_btn_text_dark_focused"
-        app:layout_constraintBottom_toBottomOf="@+id/camerapreview"
+        android:id="@+id/refocus"
+        android:layout_width="55dp"
+        android:layout_height="58dp"
+        android:clickable="true"
+        android:foreground="@drawable/refocus"
+        app:backgroundTint="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintHorizontal_bias="0.928"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/camerapreview"
-        app:layout_constraintVertical_bias="0.962"
-        app:srcCompat="@color/common_google_signin_btn_text_dark_default" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.769"
+        app:srcCompat="@drawable/refocus"
+        android:focusable="true" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

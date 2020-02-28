@@ -3,20 +3,31 @@ package com.devwings.info_qr;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintHelper;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -24,7 +35,6 @@ public class Manual_Update extends AppCompatActivity {
     public static final String EQUIP_ID = "id";
     public static final String EQUIP_NAME = "name";
     public static final String DATE = "date";
-
     TextView mQuoteTextView;
 
     private DocumentReference mDocRef = FirebaseFirestore.getInstance().document("Equipment/information");
@@ -36,7 +46,7 @@ public class Manual_Update extends AppCompatActivity {
         mQuoteTextView = (TextView) findViewById(R.id.textViewInspiring);
     }
 
-    public void fetchQuote(View view){
+    public void fetchQuote(final View view){
 
         mDocRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
@@ -48,13 +58,16 @@ public class Manual_Update extends AppCompatActivity {
                     String equip_date = documentSnapshot.getString(DATE);
                     mQuoteTextView.setText("\"ID:- " +System.getProperty("line.separator")+ equip_id + System.getProperty("line.separator")+"\" Equip Name:- "+System.getProperty("line.separator") + equip_name + System.getProperty("line.separator")+"\" Last Service Date:- "+System.getProperty("line.separator") + equip_date);
                     Toast.makeText(Manual_Update.this, "Data Fetch Successful!", Toast.LENGTH_SHORT).show();
+                    Snackbar snackbar = Snackbar
+                            .make(view, "Establishing Secure Connection", Snackbar.LENGTH_SHORT);
+                    snackbar.show();
                 }
             }
         });
 
     }
 
-    public void saveQuote (View view) {
+    public void saveQuote (final View view) {
         EditText equipID_View = (EditText) findViewById(R.id.editEquipID);
         EditText equipNAMEView = (EditText) findViewById(R.id.editEquipName);
         EditText equipDATEView = (EditText) findViewById(R.id.editEquipService);
@@ -73,6 +86,9 @@ public class Manual_Update extends AppCompatActivity {
             @Override
             public void onSuccess(Void aVoid) {
                 Toast.makeText(Manual_Update.this, "Successfully Added to Database", Toast.LENGTH_SHORT).show();
+                Snackbar snackbar = Snackbar
+                        .make(view, "Establishing Secure Connection", Snackbar.LENGTH_SHORT);
+                snackbar.show();
 
             }
         }).addOnFailureListener(new OnFailureListener() {
