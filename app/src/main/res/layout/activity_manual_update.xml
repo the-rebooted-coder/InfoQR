@@ -69,19 +69,19 @@
         android:hint="Enter Equipment ID Here!"
         android:inputType="text"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/editEquipName"
+        app:layout_constraintBottom_toTopOf="@+id/textViewInspiring"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.829" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editEquipName"
         android:layout_width="259dp"
         android:layout_height="43dp"
         android:layout_marginStart="76dp"
+        android:layout_marginTop="51dp"
         android:layout_marginEnd="76dp"
+        android:layout_marginBottom="41dp"
         android:background="@drawable/roundedback"
         android:cursorVisible="false"
         android:ems="10"
@@ -90,17 +90,17 @@
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/editEquipService"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.862" />
+        app:layout_constraintTop_toBottomOf="@+id/editEquipID" />
 
     <EditText
         android:id="@+id/editEquipService"
         android:layout_width="259dp"
         android:layout_height="43dp"
         android:layout_marginStart="76dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="76dp"
+        android:layout_marginBottom="28dp"
         android:background="@drawable/roundedback"
         android:cursorVisible="false"
         android:ems="10"
@@ -109,10 +109,8 @@
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/textViewInspiring"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.883" />
+        app:layout_constraintTop_toBottomOf="@+id/editEquipName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
