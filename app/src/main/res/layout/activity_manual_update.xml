@@ -11,20 +11,16 @@
         android:id="@+id/button"
         android:layout_width="103dp"
         android:layout_height="49dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="29dp"
-        android:layout_marginEnd="261dp"
-        android:layout_marginBottom="652dp"
         android:background="@drawable/roundedbutton"
         android:fontFamily="@font/google_sans"
         android:onClick="saveQuote"
-        android:text="@string/save"
+        android:text="@string/add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.181"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.043" />
 
     <Button
         android:id="@+id/button3"
@@ -71,7 +67,7 @@
         android:cursorVisible="false"
         android:ems="10"
         android:hint="Enter Equipment ID Here!"
-        android:inputType="numberSigned"
+        android:inputType="text"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/editEquipName"
         app:layout_constraintEnd_toEndOf="parent"

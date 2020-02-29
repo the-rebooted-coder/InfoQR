@@ -22,6 +22,7 @@
     <string name="copyright">Copyright © 2020 DevWings</string>
     <string name="fetch">Fetch</string>
     <string name="save">Save</string>
+    <string name="add">ADD</string>
 </resources>
 
 
