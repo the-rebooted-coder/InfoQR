@@ -23,6 +23,12 @@
     <string name="fetch">Fetch</string>
     <string name="save">Save</string>
     <string name="add">ADD</string>
+    <array name="genres">
+        <item>Conveyor</item>
+        <item>Scanner</item>
+        <item>Detector</item>
+        <item>Checker</item>
+    </array>
 </resources>
 
 
