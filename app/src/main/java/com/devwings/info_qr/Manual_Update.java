@@ -1,6 +1,7 @@
 package com.devwings.info_qr;
 
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.WindowManager;
@@ -26,6 +27,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Manual_Update extends AppCompatActivity {
+    private View myView;
+    private Vibrator myVib;
 
     EditText editTextName;
     Button buttonAdd;
