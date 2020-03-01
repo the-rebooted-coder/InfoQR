@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alpha xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/accelerate_interpolator"
+    android:fromAlpha="0.0" android:toAlpha="1.0" android:duration="2000" />
+
+    <!--
+       _____           __          ___
+      |  __ \          \ \        / (_)
+      | |  | | _____   _\ \  /\  / / _ _ __   __ _ ___
+      | |  | |/ _ \ \ / /\ \/  \/ / | | '_ \ / _` / __|
+      | |__| |  __/\ V /  \  /\  /  | | | | | (_| \__ \
+      |_____/ \___| \_/    \/  \/   |_|_| |_|\__, |___/
+                                              __/ |
+                                             |___/
+     -->

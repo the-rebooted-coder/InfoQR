@@ -5,37 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".Splash_Screen" >
+    tools:context=".Splash_Screen">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="229dp"
-        android:layout_height="90dp"
-        android:fontFamily="@font/concert_one"
+        android:layout_width="214dp"
+        android:layout_height="161dp"
+        android:layout_marginStart="91dp"
+        android:layout_marginTop="144dp"
+        android:layout_marginEnd="91dp"
+        android:layout_marginBottom="452dp"
+        android:fontFamily="@font/google_sans"
         android:text="@string/infoqr"
         android:textAlignment="center"
         android:textColor="@color/common_google_signin_btn_text_dark_default"
         android:textSize="60sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/google_sans"
-        android:text="@string/developer"
+        android:text="@string/copyright"
         android:textColor="@color/common_google_signin_btn_text_dark_default"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.977" />
+        app:layout_constraintVertical_bias="0.961" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
