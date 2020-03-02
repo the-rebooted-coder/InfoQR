@@ -79,6 +79,7 @@
         app:layout_constraintHorizontal_bias="0.357"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerGenres" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
