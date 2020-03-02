@@ -8,7 +8,7 @@
     <string name="user_on_scan">User Details</string>
     <string name="report_a_bug_scan">Report a Bug</string>
     <string name="generate_qr_scan">Generate QR</string>
-    <string name="recent_scans_scan_activity">Manual Update</string>
+    <string name="recent_scans_scan_activity">Add Record</string>
     <string name="cutebugimage">cuteBugImage</string>
     <string name="quote">One of the basic rules of the universe is that nothing is perfect</string>
     <string name="top_bar_colored">top_bar_colored</string>
@@ -24,12 +24,9 @@
     <string name="save">Save</string>
     <string name="add">ADD</string>
     <string name="equip_id">Enter Equipment ID Here</string>
-    <array name="genres">
-        <item>Conveyor</item>
-        <item>Scanner</item>
-        <item>Detector</item>
-        <item>Checker</item>
-    </array>
+    <string name="equip_name">Enter Equipment Name</string>
+    <string name="equip_date">Enter Last Service Date</string>
+    <string name="add_record">Add Record</string>
 </resources>
 
 

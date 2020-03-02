@@ -32,7 +32,8 @@ public class Manual_Update extends AppCompatActivity {
 
     EditText editTextName;
     Button buttonAdd;
-    Spinner spinnerGenres;
+    EditText spinnerGenres;
+    EditText service_date;
 
     DatabaseReference databaseArtists;
 
@@ -45,7 +46,8 @@ public class Manual_Update extends AppCompatActivity {
 
         editTextName = (EditText) findViewById(R.id.editTextName);
         buttonAdd = (Button) findViewById(R.id.buttonAddArtist);
-        spinnerGenres = (Spinner) findViewById(R.id.spinnerGenres);
+        spinnerGenres = (EditText) findViewById(R.id.spinnerGenres);
+        service_date = (EditText) findViewById(R.id.service_date);
 
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,17 +58,18 @@ public class Manual_Update extends AppCompatActivity {
     }
     private void addArtist(){
         String name = editTextName.getText().toString().trim();
-        String genre  = spinnerGenres.getSelectedItem().toString();
+        String genre  = spinnerGenres.getText().toString().trim();
+        String date = service_date.getText().toString().trim();
 
         if (!TextUtils.isEmpty(name))
         {
             String id = databaseArtists.push().getKey();
-            Artist artist = new Artist(id, name, genre);
+            Artist artist = new Artist(id, name, genre, date);
             databaseArtists.child(id).setValue(artist);
-            Toast.makeText(this, "Artist Added", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Record Added!", Toast.LENGTH_LONG).show();
         }
         else{
-            Toast.makeText(this, "You should enter a name", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "You should Enter a Name", Toast.LENGTH_LONG).show();
         }
 
     }

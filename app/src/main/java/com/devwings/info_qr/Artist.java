@@ -4,14 +4,16 @@ public class Artist {
     String artistId;
     String artistName;
     String artistGenre;
+    String artistdate;
 
-    public Artist() {
+    public Artist(String id, String name, String genre) {
     }
 
-    public Artist(String artistId, String artistName, String artistGenre) {
+    public Artist(String artistId, String artistName, String artistGenre, String artistDate) {
         this.artistId = artistId;
         this.artistName = artistName;
         this.artistGenre = artistGenre;
+        this.artistdate = artistDate;
     }
 
     public String getArtistId() {
@@ -25,6 +27,8 @@ public class Artist {
     public String getArtistGenre() {
         return artistGenre;
     }
+
+    public String getArtistDate() {return  artistdate;}
 }
 
 /*
