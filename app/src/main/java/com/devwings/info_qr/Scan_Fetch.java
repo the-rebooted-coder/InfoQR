@@ -16,7 +16,7 @@ public class Scan_Fetch extends AppCompatActivity {
 //Pass Data to String Variables
         String data_1 = bundle.getString("firstdata");
 
-        TextView textView = (TextView) findViewById(R.id.textView11);
+        TextView textView = findViewById(R.id.textView11);
 
         textView.setText(data_1);
 

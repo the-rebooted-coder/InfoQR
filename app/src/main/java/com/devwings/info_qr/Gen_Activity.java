@@ -39,10 +39,10 @@ public class  Gen_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gen);
-        equipmentid=(EditText) findViewById(R.id.equipmentid);
-        qrimage=(ImageView)findViewById(R.id.qrimage);
-        genqr=(Button)findViewById(R.id.genqrbtn);
-        savebtn=(Button)findViewById(R.id.butnsave);
+        equipmentid= findViewById(R.id.equipmentid);
+        qrimage= findViewById(R.id.qrimage);
+        genqr= findViewById(R.id.genqrbtn);
+        savebtn= findViewById(R.id.butnsave);
         genqr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

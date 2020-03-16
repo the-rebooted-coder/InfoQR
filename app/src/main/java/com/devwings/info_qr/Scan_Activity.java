@@ -43,8 +43,8 @@ public class Scan_Activity extends AppCompatActivity {
 
         final Vibrator vibe = (Vibrator) Scan_Activity.this.getSystemService(Context.VIBRATOR_SERVICE);
 
-        surfaceView = (SurfaceView)findViewById(R.id.camerapreview);
-        textView4 = (TextView)findViewById(R.id.textView4);
+        surfaceView = findViewById(R.id.camerapreview);
+        textView4 = findViewById(R.id.textView4);
 
         bugbtn = findViewById(R.id.button7);
         userbtn=findViewById(R.id.button5);

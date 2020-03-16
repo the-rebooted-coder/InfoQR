@@ -5,26 +5,23 @@ import android.os.Vibrator;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
-import android.widget.TextView;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.database.ValueEventListener;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Manual_Update extends AppCompatActivity {
     private View myView;
@@ -36,6 +33,9 @@ public class Manual_Update extends AppCompatActivity {
     EditText service_date;
 
     DatabaseReference databaseArtists;
+    ListView listViewArtists;
+
+    List<Artist> artistList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,10 +44,12 @@ public class Manual_Update extends AppCompatActivity {
         setContentView(R.layout.activity_manual_update);
         databaseArtists = FirebaseDatabase.getInstance().getReference("artists");
 
-        editTextName = (EditText) findViewById(R.id.editTextName);
-        buttonAdd = (Button) findViewById(R.id.buttonAddArtist);
-        spinnerGenres = (EditText) findViewById(R.id.spinnerGenres);
-        service_date = (EditText) findViewById(R.id.service_date);
+        editTextName = findViewById(R.id.editTextName);
+        buttonAdd = findViewById(R.id.buttonAddArtist);
+        spinnerGenres = findViewById(R.id.spinnerGenres);
+        service_date = findViewById(R.id.service_date);
+
+        artistList = new ArrayList<>();
 
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +58,29 @@ public class Manual_Update extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        databaseArtists.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                artistList.clear();
+                for (DataSnapshot artistSnapshot: dataSnapshot.getChildren()){
+                    Artist artist = artistSnapshot.getValue(Artist.class);
+                    artistList.add(artist);
+                }
+                ArtistList adapter = new ArtistList(Manual_Update.this, artistList);
+                listViewArtists.setAdapter(adapter);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+    }
+
     private void addArtist(){
         String name = editTextName.getText().toString().trim();
         String genre  = spinnerGenres.getText().toString().trim();
