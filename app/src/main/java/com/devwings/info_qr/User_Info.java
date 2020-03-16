@@ -2,10 +2,9 @@ package com.devwings.info_qr;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.Bitmap;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,6 +22,24 @@ public class User_Info extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_nfo);
+        final TextView  username = (TextView)findViewById(R.id.username_field);
+        username.setText("UserName:");
+        username.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                username.setVisibility(View.INVISIBLE);
+            }
+        },6000);
+
+        final TextView usersemail = (TextView)findViewById(R.id.usersemial);
+        usersemail.setText("Email ID:");
+        usersemail.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                usersemail.setVisibility(View.INVISIBLE);
+            }
+        },6000);
+
         usrnm=(TextView)findViewById(R.id.textView10);
         useremail=findViewById(R.id.textView12);
         userphoto=findViewById(R.id.imageView1);
