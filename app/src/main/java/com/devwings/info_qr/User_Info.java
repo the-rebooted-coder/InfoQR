@@ -22,7 +22,7 @@ public class User_Info extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_nfo);
-        final TextView  username = (TextView)findViewById(R.id.username_field);
+        final TextView  username = findViewById(R.id.username_field);
         username.setText("UserName:");
         username.postDelayed(new Runnable() {
             @Override
@@ -31,7 +31,7 @@ public class User_Info extends AppCompatActivity {
             }
         },6000);
 
-        final TextView usersemail = (TextView)findViewById(R.id.usersemial);
+        final TextView usersemail = findViewById(R.id.usersemial);
         usersemail.setText("Email ID:");
         usersemail.postDelayed(new Runnable() {
             @Override
@@ -40,7 +40,7 @@ public class User_Info extends AppCompatActivity {
             }
         },6000);
 
-        usrnm=(TextView)findViewById(R.id.textView10);
+        usrnm= findViewById(R.id.textView10);
         useremail=findViewById(R.id.textView12);
         userphoto=findViewById(R.id.imageView1);
         currentUser = FirebaseAuth.getInstance().getCurrentUser();
@@ -60,3 +60,13 @@ public class User_Info extends AppCompatActivity {
         }
     }
 }
+/*
+ _____           __          ___
+ |  __ \          \ \        / (_)
+ | |  | | _____   _\ \  /\  / / _ _ __   __ _ ___
+ | |  | |/ _ \ \ / /\ \/  \/ / | | '_ \ / _` / __|
+ | |__| |  __/\ V /  \  /\  /  | | | | | (_| \__ \
+ |_____/ \___| \_/    \/  \/   |_|_| |_|\__, |___/
+                                         __/ |
+                                        |___/
+ */

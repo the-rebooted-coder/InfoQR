@@ -70,8 +70,6 @@ public class Manual_Update extends AppCompatActivity {
                     Artist artist = artistSnapshot.getValue(Artist.class);
                     artistList.add(artist);
                 }
-                ArtistList adapter = new ArtistList(Manual_Update.this, artistList);
-                listViewArtists.setAdapter(adapter);
             }
 
             @Override
