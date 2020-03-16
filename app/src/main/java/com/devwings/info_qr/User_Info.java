@@ -39,7 +39,7 @@ public class User_Info extends AppCompatActivity {
 
         }
         else {
-            Toast.makeText(this, "plaese be logged in", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please be logged in", Toast.LENGTH_SHORT).show();
         }
     }
 }

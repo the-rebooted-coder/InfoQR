@@ -27,6 +27,8 @@
     <string name="equip_name">Enter Equipment Name</string>
     <string name="equip_date">Enter Last Service Date</string>
     <string name="add_record">Add Record</string>
+    <string name="usr_name">TextView</string>
+    <string name="usr_email">TextView</string>
 </resources>
 
 
