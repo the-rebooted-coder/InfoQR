@@ -6,7 +6,7 @@ public class Artist {
     String artistGenre;
     String artistdate;
 
-    public Artist(String id, String name, String genre) {
+    public Artist() {
     }
 
     public Artist(String artistId, String artistName, String artistGenre, String artistDate) {
